@@ -1,0 +1,26 @@
+.innerloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+  .innerloader img
+  {
+    vertical-align: middle;
+  }
+
+  .innerloader{
+    animation: blinker 1s linear infinite;
+  }
+  
+  .outerloader
+  {
+    width:100vm;
+    height:100vm;
+  }
+  @keyframes blinker {
+    80% {
+      opacity: 0;
+    }
+  }

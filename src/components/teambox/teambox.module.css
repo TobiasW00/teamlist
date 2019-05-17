@@ -1,0 +1,8 @@
+.teamboxboxdiv
+{
+    border:2px solid black;
+    border-radius: 10px;
+    height:160px;
+    cursor: pointer;
+    margin:10px;
+}
