@@ -1,8 +1,19 @@
 .teamboxboxdiv
 {
-    border:2px solid black;
-    border-radius: 10px;
-    height:160px;
+    border:1px solid black; 
+    border-radius: 5px;
     cursor: pointer;
-    margin:10px;
+    margin-bottom:10px;
+    box-sizing: border-box;
+}
+
+.header
+{
+    background: orangered;
+    color:white;
+    padding: 10px;
+}
+.header > h1
+{
+    margin: 0;
 }

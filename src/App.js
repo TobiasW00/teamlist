@@ -1,27 +1,19 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import './App.module.css';
 import { Route } from 'react-router-dom';
-import {connect} from 'react-redux';
 import Home from "./pages/Home";
-import { withRouter } from 'react-router-dom';
-class App extends Component {
-  constructor(props) {
-    super(props);
-}
-
-  render() {
+import {TeamsContextWrapper} from './contexts/TeamsContext';
+function App(){
 
     return (
+      <TeamsContextWrapper>
       <div className="App">
-      <header className="App-header">
-      </header>
-      <div>
       <Route exact path="/" component={Home} />
       </div>
-    </div>
+    </TeamsContextWrapper>
     );
   }
-}
 
 
-export default withRouter(connect()(App));
+
+export default App;

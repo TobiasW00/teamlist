@@ -1,0 +1,52 @@
+.searchbarheader {
+    position: fixed;
+    padding: 10px;
+    z-index: 1599;
+    background: #fff;
+    box-sizing: border-box;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 8px 4px -4px grey;
+}
+
+.searchbarinput {
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #ececec;
+    outline: none;
+    width: calc(100% - 400px);
+    margin-right: 10px;
+    margin-left: 10px;
+    -webkit-appearance: none;
+}
+
+#app-launcher-header img {
+    -webkit-animation: opac 3s;
+    animation: opac 3s;
+}
+.refralogoimg {
+    vertical-align: top;
+    float: right;
+    width: 300px;
+}
+.searchbarheader img
+{
+    animation: opac 3s;
+}
+@keyframes opac{from{opacity:0} to {opacity:1}}
+
+@media (max-width: 700px) {
+    .searchbarheader img
+    {
+        display: none;
+    }
+    .searchbarinput
+    {
+        width: 98%;
+    }
+
+}
