@@ -8,6 +8,12 @@ class TeamsApi {
  return  adalApiFetch(fetch,`https://graph.microsoft.com/v1.0/me/joinedTeams`,{}).then(response => response.json());
 }
 
+static getTeamUrl(id)
+{
+    //  https://graph.microsoft.com/v1.0/teams/{id}
+    return  adalApiFetch(fetch,`https://graph.microsoft.com/v1.0/teams/${id}`,{}).then(response =>  response.json()).then(team=> Promise.resolve(team.webUrl));
+}
+
 static getchannels(teamid)
 {
   return  adalApiFetch(fetch,`https://graph.microsoft.com/beta/teams/` + teamid + `/channels`,{}).then(response => response.json());

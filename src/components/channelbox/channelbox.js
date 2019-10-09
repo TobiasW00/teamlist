@@ -7,11 +7,17 @@ function Channelbox(props) {
     if(props.channels === undefined)
     return null;
 
+const showChannel = (webUrl) =>
+{
+    window.open(webUrl);
+}
+
+
     let listofchannels =[];
 for(let i=0; i< props.channels.length;i++)
 {
     const channel = props.channels[i];
-listofchannels.push(<div key={channel.id}><img src="/pics/channel.jpg" className={styles.icon} alt={channel.displayName}/>{channel.displayName}</div>)
+listofchannels.push(<div onClick={()=> showChannel(channel.webUrl)} key={channel.id}><img src="/pics/channel.jpg" className={styles.icon} alt={channel.displayName}/>{channel.displayName}</div>)
 }
 
 

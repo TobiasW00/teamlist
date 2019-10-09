@@ -1,11 +1,12 @@
 .searchbarheader {
     position: fixed;
-    padding: 10px;
     z-index: 1599;
     background: #fff;
     box-sizing: border-box;
     top: 0;
     width: 100%;
+    margin:0;
+    left:0;
     text-align: center;
     border-bottom: 1px solid #000;
     box-shadow: 0 8px 4px -4px grey;
@@ -22,20 +23,22 @@
     margin-right: 10px;
     margin-left: 10px;
     -webkit-appearance: none;
+    vertical-align: middle;
 }
 
 #app-launcher-header img {
     -webkit-animation: opac 3s;
     animation: opac 3s;
+    vertical-align: middle;
 }
 .refralogoimg {
-    vertical-align: top;
-    float: right;
+    vertical-align: middle;
     width: 300px;
 }
 .searchbarheader img
 {
     animation: opac 3s;
+    vertical-align: middle;
 }
 @keyframes opac{from{opacity:0} to {opacity:1}}
 

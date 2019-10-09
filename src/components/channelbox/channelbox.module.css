@@ -1,16 +1,18 @@
 .channelboxes > div
 {
-     background: orangered;
-    margin:10px;
-    padding:10px;
+      margin:5px;
+    padding:5px;
+    margin-left: 10px;
     border-radius: 5px;
     display: inline-flex;
     align-items: center; 
-   
+    border:1px solid black;
+  
 }
 .channelboxes
 {
     box-sizing: border-box;
+    display: inline-block;
 }
 .icon
 {

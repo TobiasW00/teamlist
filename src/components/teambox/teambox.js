@@ -7,7 +7,7 @@ import useHover from '../../hooks/useHover';
 
 
 function Teambox({team}) {
-    const {getChannelsAndMembers} = useContext(TeamsContext);
+    const {getChannelsAndMembers,getTeamUrl} = useContext(TeamsContext);
     const [hoverRef, isHovered] = useHover();
 
     useEffect(()=>
@@ -15,20 +15,25 @@ function Teambox({team}) {
         if(isHovered && team.channels===undefined && team.members===undefined)
         {
             getChannelsAndMembers(team.id)
+          
         }
     },[isHovered]);
     
     const openTeam = function openteam()
     {
-       const url = 'https://teams.microsoft.com/_#/teamDashboard/' +team.displayName + '/' + team.id;
-       window.open(url);
+        getTeamUrl(team.id).then(url =>
+            {
+               window.open(url);
+            });
     }
 
     return <div ref={hoverRef} onClick={openTeam} className={styles.teamboxboxdiv}>
-    <div className={styles.header}><h1>{team.displayName}</h1></div>
-    <div>{team.description}</div>
-    <div><ChannelBox channels={team.channels} /></div>
-    <div><MemberBox members={team.members} /></div>
+    <div className={styles.header}><h2>{team.displayName}</h2></div>
+    <div className={styles.description}>{team.description}</div>
+    <div className={styles.bottomboxescontainer}>
+    <ChannelBox channels={team.channels} />
+    <MemberBox members={team.members} />
+    </div>
      </div>;
 }
 

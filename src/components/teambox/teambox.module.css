@@ -13,7 +13,15 @@
     color:white;
     padding: 10px;
 }
-.header > h1
+.header > h2
 {
     margin: 0;
+}
+.description
+{
+    padding:10px;
+}
+.bottomboxescontainer
+{
+    vertical-align: middle;
 }

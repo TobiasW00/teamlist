@@ -1,4 +1,4 @@
-import React,{useReducer,useEffect} from 'react';
+import React,{useReducer,useEffect,useState} from 'react';
 import teamsapi from '../api/api';
 
 export const TeamsContext = React.createContext([]);
@@ -31,7 +31,7 @@ function reducer(state, action) {
 export function TeamsContextWrapper(props) 
 {
     const [teams, dispatch] = useReducer(reducer,[])
-
+    const [isLoading,setIsLoading] = useState(true);
 
 function getChannelsAndMembers(teamid)
 {
@@ -46,16 +46,23 @@ function getChannelsAndMembers(teamid)
   });
 }
 
+function getTeamUrl(id)
+{
+  return  teamsapi.getTeamUrl(id);
+}
+
 useEffect(() => {
+    setIsLoading(true);
     teamsapi.getteams().then((data) =>
     { 
         dispatch({type: 'SET_TEAMS',payload:data.value});
+        setIsLoading(false);
     });
 },[]);
 
 
 return(
-<TeamsContext.Provider value={{teams,getChannelsAndMembers}}>
+<TeamsContext.Provider value={{teams,getChannelsAndMembers,isLoading,getTeamUrl}}>
     {props.children}
 </TeamsContext.Provider>
 );

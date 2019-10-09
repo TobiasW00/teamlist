@@ -11,8 +11,8 @@ function Memberbox(props) {
     for(let i=0; i< props.members.length;i++)
     {
         const member = props.members[i];
-        console.log(member);
-        listofmembers.push(<div key={member.id}><img src="/pics/user.png" className={styles.icon} alt={member.displayName}/>{member.displayName}</div>)
+        // <img src="/pics/user.png" className={styles.icon} alt={member.displayName}/>
+        listofmembers.push(<div key={member.id}>{member.displayName}</div>)
     }
 
     return <div className={styles.memberboxes}>
