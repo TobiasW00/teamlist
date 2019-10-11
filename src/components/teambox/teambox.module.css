@@ -1,17 +1,21 @@
 .teamboxboxdiv
 {
     border:1px solid black; 
-    border-radius: 5px;
+  /*  border-radius: 5px; */
     cursor: pointer;
     margin-bottom:10px;
     box-sizing: border-box;
 }
-
+.teamboxboxdiv:hover
+{
+  background:#FAFAFA;
+}
 .header
 {
     background: orangered;
     color:white;
-    padding: 10px;
+    padding: 5px;
+    font-size: 0.8em;
 }
 .header > h2
 {
@@ -20,6 +24,7 @@
 .description
 {
     padding:10px;
+    font-size: 0.8em;
 }
 .bottomboxescontainer
 {

@@ -1,13 +1,14 @@
 .memberboxes > div
 {
-    background: grey;
+   /* background: grey; */
     margin:5px;
     padding:5px;
-    margin-left: 10px;
-    border-radius: 5px;
+   /* margin-left: 10px;
+    border-radius: 5px;  */
     display: inline-flex;
     align-items: center; 
-    border:1px solid transparent;
+    font-size: 0.8em;
+    border:1px solid black;
 }
 .memberboxes
 {

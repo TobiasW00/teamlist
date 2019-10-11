@@ -17,7 +17,8 @@ const showChannel = (webUrl) =>
 for(let i=0; i< props.channels.length;i++)
 {
     const channel = props.channels[i];
-listofchannels.push(<div onClick={()=> showChannel(channel.webUrl)} key={channel.id}><img src="/pics/channel.jpg" className={styles.icon} alt={channel.displayName}/>{channel.displayName}</div>)
+    // <img src="/pics/channel.jpg" className={styles.icon} alt={channel.displayName}/>
+listofchannels.push(<div onClick={()=> showChannel(channel.webUrl)} key={channel.id}>{channel.displayName}</div>)
 }
 
 
