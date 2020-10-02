@@ -1,14 +1,14 @@
 import { AuthenticationContext, adalFetch, withAdalLogin } from 'react-adal';
 
 export const adalConfig = {
-  tenant: '1d94911e-1c15-4a5f-9ee9-a512d9921444',
+  tenant: '26dfeab2-7b86-4967-b7fe-656976fa09de',
   clientId: '46b15590-7490-4e63-8583-4c8c87329244',
   endpoints: {
     api: 'https://graph.microsoft.com' ,
   },
   cacheLocation: 'localStorage',
   postLogoutRedirectUri: window.location.origin,
-  redirectUri: 'https://teamlist.azurewebsites.net'
+  redirectUri: 'http://localhost:3000'
 };
 
 export const authContext = new AuthenticationContext(adalConfig);
