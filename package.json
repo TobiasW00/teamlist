@@ -7,7 +7,7 @@
     "isomorphic-fetch": "^2.2.1",
     "msal": "^1.4.1",
     "react": "^16.13.1",
-    "react-adal": "^0.4.24",
+    "react-adal": "^0.5.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3"
